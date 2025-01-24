@@ -381,11 +381,11 @@ def get_toy_bubble_wand_33_mm_diameter_double(thing, **kwargs):
     poss.append(pos12)
     poss13 = copy.deepcopy(pos1)
     poss13[0] += shift_x + shift_base
-    poss13[2] += depth -3
+    poss13[2] += 2
     poss.append(poss13)
     poss14 = copy.deepcopy(pos1)
     poss14[0] += -shift_x + shift_base 
-    poss14[2] += depth - 3
+    poss14[2] += 2
     poss.append(poss14)
     p3["pos"] = poss
     oobb_base.append_full(thing,**p3)

@@ -337,7 +337,7 @@ thing:
       pos: &id011
       - 127.5
       - 0
-      - 6.0
+      - 2.0
       r: 15.0
       radius: 15.0
       shape: cylinder
@@ -372,7 +372,7 @@ thing:
       pos: &id012
       - 82.5
       - 0
-      - 6.0
+      - 2.0
       r: 15.0
       radius: 15.0
       shape: cylinder
@@ -1009,7 +1009,7 @@ thing:
     pos:
     - 127.5
     - 0
-    - 10.5
+    - 6.5
     radius: 15.0
     save_type: none
     shape: oobb_cylinder
@@ -1037,7 +1037,7 @@ thing:
     pos:
     - 82.5
     - 0
-    - 10.5
+    - 6.5
     radius: 15.0
     save_type: none
     shape: oobb_cylinder
@@ -1117,8 +1117,8 @@ thing:
   - oobb_holes_shape_p_type_9_depth_105_0_0_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_true_both_holes_corner_holes
   - oobb_cylinder_shape_negative_type_9_depth_22.5_0_4.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
   - oobb_cylinder_shape_negative_type_9_depth_-22.5_0_4.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
-  - oobb_cylinder_shape_negative_type_9_depth_127.5_0_10.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
-  - oobb_cylinder_shape_negative_type_9_depth_82.5_0_10.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
+  - oobb_cylinder_shape_negative_type_9_depth_127.5_0_6.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
+  - oobb_cylinder_shape_negative_type_9_depth_82.5_0_6.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
   - oobb_screw_countersunk_shape_negative_type_44_depth_105_-22.0_4.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_m3_screw_wood_diameter_name_top_clearance_90_0_0_rot
   - oobb_screw_countersunk_shape_negative_type_44_depth_0_-22.0_4.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_6_width_3_height_9_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_m3_screw_wood_diameter_name_top_clearance_90_0_0_rot
   description: oomlout oobb holder toy bubble wand toy bubble wand 33 mm diameter
