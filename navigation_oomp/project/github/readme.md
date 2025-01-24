@@ -1,4 +1,4 @@
 * [oomlout](oomlout)
   * [oomlout_oobb_holder_toy_bubble_wand](oomlout/oomlout_oobb_holder_toy_bubble_wand)
-    * [toy_bubble_wand_33_mm_diameter_3_width_3_height_9_mm_depth](oomlout/oomlout_oobb_holder_toy_bubble_wand/toy_bubble_wand_33_mm_diameter_3_width_3_height_9_mm_depth)
-    * [toy_bubble_wand_33_mm_diameter_double_6_width_3_height_9_mm_depth](oomlout/oomlout_oobb_holder_toy_bubble_wand/toy_bubble_wand_33_mm_diameter_double_6_width_3_height_9_mm_depth)
+    * [toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth](oomlout/oomlout_oobb_holder_toy_bubble_wand/toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth)
+    * [toy_bubble_wand_33_mm_diameter_double_6_width_3_height_12_mm_depth](oomlout/oomlout_oobb_holder_toy_bubble_wand/toy_bubble_wand_33_mm_diameter_double_6_width_3_height_12_mm_depth)

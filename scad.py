@@ -116,7 +116,7 @@ def make_scad(**kwargs):
         p3 = copy.deepcopy(kwargs)
         p3["width"] = 3
         p3["height"] = 3
-        p3["thickness"] = 9
+        p3["thickness"] = 12
         #p3["extra"] = ""
         part["kwargs"] = p3
         nam = "toy_bubble_wand_33_mm_diameter"
@@ -129,7 +129,7 @@ def make_scad(**kwargs):
         p3 = copy.deepcopy(kwargs)
         p3["width"] = 6
         p3["height"] = 3
-        p3["thickness"] = 9
+        p3["thickness"] = 12
         #p3["extra"] = ""
         part["kwargs"] = p3
         nam = "toy_bubble_wand_33_mm_diameter_double"
@@ -277,7 +277,7 @@ def get_toy_bubble_wand_33_mm_diameter(thing, **kwargs):
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "negative"
     p3["shape"] = f"oobb_screw_countersunk"
-    p3["diameter_name"] = "m5_screw_wood"
+    p3["radius_name"] = "m5_screw_wood"
     dep = 7
     p3["depth"] = dep
     p3["clearance"] = "top"
@@ -420,7 +420,7 @@ def get_toy_bubble_wand_33_mm_diameter_double(thing, **kwargs):
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "negative"
     p3["shape"] = f"oobb_screw_countersunk"
-    p3["diameter_name"] = "m3_screw_wood"
+    p3["radius_name"] = "m5_screw_wood"
     dep = (height * 15)-1
     p3["depth"] = dep
     p3["clearance"] = "top"

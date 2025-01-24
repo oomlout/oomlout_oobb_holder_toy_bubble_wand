@@ -1,0 +1,539 @@
+classification: project
+color: oomlout_oobb_holder_toy_bubble_wand
+description_extra: ''
+description_main: toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+id: project_github_oomlout_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+id_oobb: oobb_part_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+kwargs:
+  filter: ''
+  height: 3
+  modes:
+  - 3dpr
+  navigation: false
+  oomp_classification: project
+  oomp_color: oomlout_oobb_holder_toy_bubble_wand
+  oomp_description_extra: ''
+  oomp_description_main: toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+  oomp_manufacturer: ''
+  oomp_mode: project
+  oomp_part_number: ''
+  oomp_run: false
+  oomp_size: oomlout
+  oomp_type: github
+  overwrite: true
+  thickness: 12
+  type: oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter
+  width: 3
+manufacturer: ''
+name: toy_bubble_wand_33_mm_diameter
+part_number: ''
+project_name: C:\gh\oomlout_oobb_holder_toy_bubble_wand
+size: oomlout
+thing:
+  classification: oobb
+  color: ''
+  components:
+  - - depth: 12
+      height: 3
+      pos:
+      - 0
+      - 0
+      - 0
+      shape: rounded_rectangle
+      size:
+      - 44
+      - 44
+      - 12
+      type: positive
+      width: 3
+  - - - h: 200
+        inclusion: laser
+        m: ''
+        pos: &id001
+        - -15.0
+        - -15.0
+        - -100.0
+        r: 3.0
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 3dpr
+        m: ''
+        pos: *id001
+        r: 3.25
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 'true'
+        m: ''
+        pos: *id001
+        r: 3.0
+        shape: cylinder
+        type: negative
+    - - h: 200
+        inclusion: laser
+        m: ''
+        pos: &id002
+        - -15.0
+        - 15.0
+        - -100.0
+        r: 3.0
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 3dpr
+        m: ''
+        pos: *id002
+        r: 3.25
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 'true'
+        m: ''
+        pos: *id002
+        r: 3.0
+        shape: cylinder
+        type: negative
+    - - h: 200
+        inclusion: laser
+        m: ''
+        pos: &id003
+        - 15.0
+        - -15.0
+        - -100.0
+        r: 3.0
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 3dpr
+        m: ''
+        pos: *id003
+        r: 3.25
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 'true'
+        m: ''
+        pos: *id003
+        r: 3.0
+        shape: cylinder
+        type: negative
+    - - h: 200
+        inclusion: laser
+        m: ''
+        pos: &id004
+        - 15.0
+        - 15.0
+        - -100.0
+        r: 3.0
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 3dpr
+        m: ''
+        pos: *id004
+        r: 3.25
+        shape: cylinder
+        type: negative
+      - h: 200
+        inclusion: 'true'
+        m: ''
+        pos: *id004
+        r: 3.0
+        shape: cylinder
+        type: negative
+  - - depth: 12
+      h: 12
+      height: 3
+      inclusion: laser
+      pos: &id005
+      - 0
+      - 0
+      - 0.0
+      r: 15.0
+      radius: 15.0
+      shape: cylinder
+      type: negative
+      width: 3
+    - depth: 12
+      h: 12
+      height: 3
+      inclusion: 3dpr
+      pos: *id005
+      r: 15.0
+      shape: cylinder
+      type: negative
+      width: 3
+    - depth: 12
+      h: 12
+      height: 3
+      inclusion: 'true'
+      pos: *id005
+      r: 15.0
+      radius: 15.0
+      shape: cylinder
+      type: negative
+      width: 3
+  - - objects:
+      - - clearance: top
+          depth: 7
+          h: 3.75
+          height: 3
+          inclusion: laser
+          m: '#'
+          pos:
+          - 0
+          - 0
+          - -3.75
+          r1: 2.25
+          r2: 4.875
+          shape: cylinder
+          type: positive
+          width: 3
+      - - - clearance: top
+            depth: 7
+            h: 250
+            height: 3
+            inclusion: laser
+            m: '#'
+            pos:
+            - 0
+            - 0
+            - 0.0
+            r: 4.875
+            shape: cylinder
+            type: positive
+            width: 3
+      - - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: laser
+          m: '#'
+          pos: &id006
+          - 0
+          - 0
+          - -7.0
+          r: 2.25
+          radius: 2.25
+          shape: cylinder
+          type: positive
+          width: 3
+        - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: 3dpr
+          m: '#'
+          pos: *id006
+          r: 2.25
+          shape: cylinder
+          type: positive
+          width: 3
+        - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: 'true'
+          m: '#'
+          pos: *id006
+          r: 2.25
+          radius: 2.25
+          shape: cylinder
+          type: positive
+          width: 3
+      - - clearance: top
+          depth: 7
+          h: 4.2
+          height: 3
+          inclusion: 3dpr
+          m: '#'
+          pos:
+          - 0
+          - 0
+          - -4.2
+          r1: 2.75
+          r2: 5.5
+          shape: cylinder
+          type: positive
+          width: 3
+      - - - clearance: top
+            depth: 7
+            h: 250
+            height: 3
+            inclusion: 3dpr
+            m: '#'
+            pos:
+            - 0
+            - 0
+            - 0.0
+            r: 5.5
+            shape: cylinder
+            type: positive
+            width: 3
+      - - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: laser
+          m: '#'
+          pos: &id007
+          - 0
+          - 0
+          - -7.0
+          r: 2.75
+          radius: 2.75
+          shape: cylinder
+          type: positive
+          width: 3
+        - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: 3dpr
+          m: '#'
+          pos: *id007
+          r: 2.75
+          shape: cylinder
+          type: positive
+          width: 3
+        - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: 'true'
+          m: '#'
+          pos: *id007
+          r: 2.75
+          radius: 2.75
+          shape: cylinder
+          type: positive
+          width: 3
+      - - clearance: top
+          depth: 7
+          h: 3.75
+          height: 3
+          inclusion: 'true'
+          m: '#'
+          pos:
+          - 0
+          - 0
+          - -3.75
+          r1: 2.25
+          r2: 4.875
+          shape: cylinder
+          type: positive
+          width: 3
+      - - - clearance: top
+            depth: 7
+            h: 250
+            height: 3
+            inclusion: 'true'
+            m: '#'
+            pos:
+            - 0
+            - 0
+            - 0.0
+            r: 4.875
+            shape: cylinder
+            type: positive
+            width: 3
+      - - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: laser
+          m: '#'
+          pos: &id008
+          - 0
+          - 0
+          - -7.0
+          r: 2.25
+          radius: 2.25
+          shape: cylinder
+          type: positive
+          width: 3
+        - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: 3dpr
+          m: '#'
+          pos: *id008
+          r: 2.25
+          shape: cylinder
+          type: positive
+          width: 3
+        - clearance: top
+          depth: 7
+          h: 7
+          height: 3
+          inclusion: 'true'
+          m: '#'
+          pos: *id008
+          r: 2.25
+          radius: 2.25
+          shape: cylinder
+          type: positive
+          width: 3
+      pos:
+      - 0
+      - 15.0
+      - 6.0
+      rot:
+      - 90
+      - 0
+      - 0
+      type: rotation
+      typetype: negative
+  components_objects:
+  - depth: 12
+    filter: ''
+    height: 3
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_holder_toy_bubble_wand
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_plate
+    thickness: 12
+    type: positive
+    width: 3
+  - both_holes: true
+    depth: 12
+    filter: ''
+    height: 3
+    holes: corner
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_holder_toy_bubble_wand
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_holes
+    thickness: 12
+    type: p
+    width: 3
+  - depth: 12
+    filter: ''
+    height: 3
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_holder_toy_bubble_wand
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 6.0
+    radius: 15.0
+    save_type: none
+    shape: oobb_cylinder
+    thickness: 12
+    type: negative
+    width: 3
+  - clearance: top
+    depth: 7
+    filter: ''
+    height: 3
+    m: '#'
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_holder_toy_bubble_wand
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 15.0
+    - 6.0
+    radius_name: m5_screw_wood
+    rot:
+    - 90
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_screw_countersunk
+    thickness: 12
+    type: negative
+    width: 3
+  components_string:
+  - oobb_plate_shape_positive_type_12_depth_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_3_width_3_height_12_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color
+  - oobb_holes_shape_p_type_12_depth_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_3_width_3_height_12_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_true_both_holes_corner_holes
+  - oobb_cylinder_shape_negative_type_12_depth_0_0_6.0_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_3_width_3_height_12_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_15.0_radius
+  - oobb_screw_countersunk_shape_negative_type_m5_screw_wood_radius_name_7_depth_0_15.0_6.0_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_3_width_3_height_12_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_toy_bubble_wand_oomp_color_top_clearance_90_0_0_rot
+  description: oomlout oobb holder toy bubble wand toy bubble wand 33 mm diameter
+    3x3x12
+  description_extra: ''
+  description_main: 3_width_3_height_12_mm_depth
+  folder: C:\gh\oomlout_oobb_version_4_generated_parts\parts\oobb_part_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+  height: 3
+  height_mm: 44
+  id: oobb_part_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+  link_main: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/navigation_oomp/oobb/part/oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter/3_width_3_height_12_mm_depth/part
+  link_redirect: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/parts/oobb_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_03_03_12
+  manufacturer: ''
+  name: Oobb Part Oomlout Oobb Holder Toy Bubble Wand Toy Bubble Wand 33 mm Diameter
+    3 Width 3 Height 12 mm Depth
+  name_short: Oomlout Oobb Holder Toy Bubble Wand Toy
+  part_number: ''
+  short_name: ''
+  size: oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter
+  thickness: 12
+  thickness_mm: 12
+  type: part
+  width: 3
+  width_mm: 44
+type: github
