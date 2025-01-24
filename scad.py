@@ -116,7 +116,7 @@ def make_scad(**kwargs):
         p3 = copy.deepcopy(kwargs)
         p3["width"] = 3
         p3["height"] = 3
-        p3["thickness"] = 9
+        p3["thickness"] = 12
         #p3["extra"] = ""
         part["kwargs"] = p3
         nam = "toy_bubble_wand_33_mm_diameter"
@@ -129,7 +129,7 @@ def make_scad(**kwargs):
         p3 = copy.deepcopy(kwargs)
         p3["width"] = 6
         p3["height"] = 3
-        p3["thickness"] = 9
+        p3["thickness"] = 12
         #p3["extra"] = ""
         part["kwargs"] = p3
         nam = "toy_bubble_wand_33_mm_diameter_double"
@@ -277,7 +277,7 @@ def get_toy_bubble_wand_33_mm_diameter(thing, **kwargs):
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "negative"
     p3["shape"] = f"oobb_screw_countersunk"
-    p3["diameter_name"] = "m3_screw_wood"
+    p3["radius_name"] = "m5_screw_wood"
     dep = 7
     p3["depth"] = dep
     p3["clearance"] = "top"
@@ -368,7 +368,7 @@ def get_toy_bubble_wand_33_mm_diameter_double(thing, **kwargs):
     p3["shape"] = f"oobb_cylinder"
     p3["radius"] = 30/2
     p3["depth"] = depth    
-    #p3["m"] = "#"
+    p3["m"] = "#"
     shift_x = 22.5
     pos1 = copy.deepcopy(pos)
     pos1[2] += depth/2
@@ -379,39 +379,48 @@ def get_toy_bubble_wand_33_mm_diameter_double(thing, **kwargs):
     pos12 = copy.deepcopy(pos1)
     pos12[0] += -shift_x
     poss.append(pos12)
+    poss13 = copy.deepcopy(pos1)
+    poss13[0] += shift_x + shift_base
+    poss13[2] += 2
+    poss.append(poss13)
+    poss14 = copy.deepcopy(pos1)
+    poss14[0] += -shift_x + shift_base 
+    poss14[2] += 2
+    poss.append(poss14)
     p3["pos"] = poss
     oobb_base.append_full(thing,**p3)
 
     #add screw rings
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "negative"
-    p3["shape"] = f"oobb_screw_countersunk"
-    p3["diameter_name"] = "m3_screw_wood"
-    dep = 7
-    p3["depth"] = dep
-    p3["clearance"] = "top"
-    p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)
-    pos1[2] += depth/2
-    pos1[1] += ((height * 15)-1)/2 - dep
-    poss = []
-    pos11 = copy.deepcopy(pos1)
-    pos11[0] += shift_x
-    poss.append(pos11)
-    pos12 = copy.deepcopy(pos1)
-    pos12[0] += -shift_x
-    poss.append(pos12)
-    p3["pos"] = poss
-    rot1 = copy.deepcopy(rot)
-    rot1[0] += 90
-    p3["rot"] = rot1
-    oobb_base.append_full(thing,**p3)
+    if False:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "negative"
+        p3["shape"] = f"oobb_screw_countersunk"
+        p3["diameter_name"] = "m3_screw_wood"
+        dep = 7
+        p3["depth"] = dep
+        p3["clearance"] = "top"
+        p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += depth/2
+        pos1[1] += ((height * 15)-1)/2 - dep
+        poss = []
+        pos11 = copy.deepcopy(pos1)
+        pos11[0] += shift_x
+        poss.append(pos11)
+        pos12 = copy.deepcopy(pos1)
+        pos12[0] += -shift_x
+        poss.append(pos12)
+        p3["pos"] = poss
+        rot1 = copy.deepcopy(rot)
+        rot1[0] += 90
+        p3["rot"] = rot1
+        oobb_base.append_full(thing,**p3)
 
     #add screw base
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "negative"
     p3["shape"] = f"oobb_screw_countersunk"
-    p3["diameter_name"] = "m3_screw_wood"
+    p3["radius_name"] = "m5_screw_wood"
     dep = (height * 15)-1
     p3["depth"] = dep
     p3["clearance"] = "top"
@@ -421,10 +430,10 @@ def get_toy_bubble_wand_33_mm_diameter_double(thing, **kwargs):
     pos1[1] += ((height * 15)-1)/2 - dep
     poss = []
     pos11 = copy.deepcopy(pos1)
-    pos11[0] += shift_x + shift_base
+    pos11[0] += shift_base
     poss.append(pos11)
     pos12 = copy.deepcopy(pos1)
-    pos12[0] += -shift_x + shift_base
+    pos12[0] += 0
     poss.append(pos12)
     p3["pos"] = poss
     rot1 = copy.deepcopy(rot)

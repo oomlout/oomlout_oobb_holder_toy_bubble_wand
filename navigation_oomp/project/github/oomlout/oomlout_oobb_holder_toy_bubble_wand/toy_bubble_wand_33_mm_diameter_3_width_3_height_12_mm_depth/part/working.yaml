@@ -1,0 +1,41 @@
+classification: project
+color: oomlout_oobb_holder_toy_bubble_wand
+description_extra: ''
+description_main: toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+id: project_github_oomlout_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+id_oobb: oobb_part_oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+kwargs:
+  filter: ''
+  height: 3
+  modes:
+  - 3dpr
+  navigation: true
+  oomp_classification: project
+  oomp_color: oomlout_oobb_holder_toy_bubble_wand
+  oomp_description_extra: ''
+  oomp_description_main: toy_bubble_wand_33_mm_diameter_3_width_3_height_12_mm_depth
+  oomp_manufacturer: ''
+  oomp_mode: project
+  oomp_part_number: ''
+  oomp_run: true
+  oomp_size: oomlout
+  oomp_type: github
+  overwrite: true
+  thickness: 12
+  typ: all
+  type: oomlout_oobb_holder_toy_bubble_wand_toy_bubble_wand_33_mm_diameter
+  width: 3
+manufacturer: ''
+name: toy_bubble_wand_33_mm_diameter
+part_number: ''
+project_name: C:\gh\oomlout_oobb_holder_toy_bubble_wand
+size: oomlout
+type: github
