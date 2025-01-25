@@ -30,8 +30,8 @@ def make_scad(**kwargs):
         filter = ""; save_type = "none"; navigation = False; overwrite = True; modes = ["3dpr"]; oomp_run = False
     elif typ == "manual":
     #filter
-        #filter = ""
-        filter = "double"
+        filter = ""
+        #filter = "double"
 
     #save_type
         save_type = "none"
@@ -112,32 +112,46 @@ def make_scad(**kwargs):
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
-        part = copy.deepcopy(part_default)
-        p3 = copy.deepcopy(kwargs)
-        p3["width"] = 3
-        p3["height"] = 3
-        p3["thickness"] = 12
-        #p3["extra"] = ""
-        part["kwargs"] = p3
-        nam = "toy_bubble_wand_33_mm_diameter"
-        part["name"] = nam
-        if oomp_mode == "oobb":
-            p3["oomp_size"] = nam
-        parts.append(part)
 
-        part = copy.deepcopy(part_default)
-        p3 = copy.deepcopy(kwargs)
-        p3["width"] = 6
-        p3["height"] = 3
-        p3["thickness"] = 12
-        #p3["extra"] = ""
-        part["kwargs"] = p3
-        nam = "toy_bubble_wand_33_mm_diameter_double"
-        part["name"] = nam
-        if oomp_mode == "oobb":
-            p3["oomp_size"] = nam
-        parts.append(part)
+        types = []
+        part = {}
+        part["width"] = 3
+        part["height"] = 3
+        part["thickness"] = 12
+        part["name"] = "toy_bubble_wand_33_mm_diameter"
+        types.append(part)
 
+        part = {}
+        part["width"] = 6
+        part["height"] = 3
+        part["thickness"] = 12
+        part["name"] = "toy_bubble_wand_33_mm_diameter_double"
+        types.append(part)
+
+        part = {}
+        part["width"] = 5
+        part["height"] = 5
+        part["thickness"] = 12
+        part["name"] = "toy_bubble_wand_33_mm_diameter_quadruple"
+        types.append(part)
+
+        for par in types:
+            wid = par["width"]
+            hei = par["height"]
+            thi = par["thickness"]
+            nam = par["name"]
+            part = copy.deepcopy(part_default)
+            p3 = copy.deepcopy(kwargs)
+            p3["width"] = wid
+            p3["height"] = hei
+            p3["thickness"] = thi
+            #p3["extra"] = ""
+            part["kwargs"] = p3
+            nam = nam
+            part["name"] = nam
+            if oomp_mode == "oobb":
+                p3["oomp_size"] = nam
+            parts.append(part)
 
     kwargs["parts"] = parts
 
@@ -468,6 +482,161 @@ def get_toy_bubble_wand_33_mm_diameter_double(thing, **kwargs):
         p3["pos"] = pos1
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
+
+def get_toy_bubble_wand_33_mm_diameter_quadruple(thing, **kwargs):
+
+    prepare_print = kwargs.get("prepare_print", False)
+    width = kwargs.get("width", 1)
+    height = kwargs.get("height", 1)
+    depth = kwargs.get("thickness", 3)                    
+    rot = kwargs.get("rot", [0, 0, 0])
+    pos = kwargs.get("pos", [0, 0, 0])
+    extra = kwargs.get("extra", "")
+    
+    shift_base = 7*15
+
+    #add plate
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "positive"
+    p3["shape"] = f"oobb_plate"    
+    p3["depth"] = depth
+    #p3["holes"] = True         uncomment to include default holes
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    poss = []
+    pos11 = copy.deepcopy(pos1)
+    pos11[0] += 0
+    poss.append(pos11)
+    pos12 = copy.deepcopy(pos1)
+    pos12[0] += shift_base
+    poss.append(pos12)
+
+    p3["pos"] = poss
+    oobb_base.append_full(thing,**p3)
+    
+    #add holes seperate
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_holes"
+    p3["both_holes"] = True  
+    p3["depth"] = depth
+    p3["holes"] = "corner"
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    p3["pos"] = poss
+    #oobb_base.append_full(thing,**p3)
+
+    #add cylinder in middle
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "negative"
+    p3["shape"] = f"oobb_cylinder"
+    p3["radius"] = 30/2
+    p3["depth"] = depth    
+    p3["m"] = "#"
+    shift_x = 18
+    shift_y = 18
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += depth/2
+    poss = []
+    pos11 = copy.deepcopy(pos1)
+    pos11[0] += shift_x
+    pos11[1] += shift_y
+    poss.append(pos11)
+    pos12 = copy.deepcopy(pos1)
+    pos12[0] += -shift_x
+    pos12[1] += shift_y
+    poss.append(pos12)
+    poss13 = copy.deepcopy(pos1)
+    poss13[0] += shift_x
+    poss13[1] += -shift_y
+    poss.append(poss13)
+    poss14 = copy.deepcopy(pos1)
+    poss14[0] += -shift_x
+    poss14[1] += -shift_y
+    poss.append(poss14)
+
+    p3["pos"] = poss
+    oobb_base.append_full(thing,**p3)
+
+    #add screw rings
+    if False:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "negative"
+        p3["shape"] = f"oobb_screw_countersunk"
+        p3["diameter_name"] = "m3_screw_wood"
+        dep = 7
+        p3["depth"] = dep
+        p3["clearance"] = "top"
+        p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += depth/2
+        pos1[1] += ((height * 15)-1)/2 - dep
+        poss = []
+        pos11 = copy.deepcopy(pos1)
+        pos11[0] += shift_x
+        poss.append(pos11)
+        pos12 = copy.deepcopy(pos1)
+        pos12[0] += -shift_x
+        poss.append(pos12)
+        p3["pos"] = poss
+        rot1 = copy.deepcopy(rot)
+        rot1[0] += 90
+        p3["rot"] = rot1
+        oobb_base.append_full(thing,**p3)
+
+    #add screw base
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "negative"
+    p3["shape"] = f"oobb_screw_countersunk"
+    p3["radius_name"] = "m5_screw_wood"
+    dep = (height * 15)-1
+    p3["depth"] = dep
+    p3["clearance"] = "top"
+    p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += depth/2
+    pos1[1] += ((height * 15)-1)/2 - dep
+    poss = []
+    pos11 = copy.deepcopy(pos1)
+    pos11[0] += shift_base
+    poss.append(pos11)
+    pos12 = copy.deepcopy(pos1)
+    pos12[0] += 0
+    poss.append(pos12)
+    p3["pos"] = poss
+    rot1 = copy.deepcopy(rot)
+    rot1[0] += 90
+    p3["rot"] = rot1
+    oobb_base.append_full(thing,**p3)
+
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [180,0,0]
+        return_value_2["objects"] = components_second
+        
+        thing["components"].append(return_value_2)
+
+    
+        #add slice # top
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -500/2
+        pos1[1] += 0
+        pos1[2] += -500/2        
+        p3["pos"] = pos1
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
 
 if __name__ == '__main__':
     kwargs = {}
